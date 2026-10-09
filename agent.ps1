@@ -1,16 +1,12 @@
 Clear-Host
-Write-Host ' _______                                         __              ______   __                 __  __ ' -ForegroundColor Cyan
-Write-Host '|       \                                       |  \            /      \ |  \               |  \|  \' -ForegroundColor Cyan
-Write-Host '| $$$$$$$\ ______   ______ ____    ______  _| $$_      ______  | $$$$$$\| $$____   ______  | $$| $$' -ForegroundColor Cyan
-Write-Host '| $$__| $$ /      \ |      \    \  /      \|   $$ \    /      \ | $$___\$$| $$    \ /      \ | $$| $$' -ForegroundColor Green
-Write-Host '| $$    $$| $$$$$$\| $$$$$$\$$$$\| $$$$$$\| $$$$$$   | $$$$$$\ \$$    \ | $$$$$$$\| $$$$$$\| $$| $$' -ForegroundColor Green
-Write-Host '| $$$$$$$\| $$  $$| $$ | $$ | $$| $$  | $$ | $$ __ | $$  $$ _\$$$$$$\| $$  | $$| $$  $$| $$| $$' -ForegroundColor Green
-Write-Host '| $$  | $$| $$$$$$$$| $$ | $$ | $$| $$__/ $$ | $$|  \| $$$$$$$$|  \__| $$| $$  | $$| $$$$$$$$| $$| $$' -ForegroundColor Cyan
-Write-Host '| $$  | $$ \$$    \| $$ | $$ | $$ \$$    $$  \$$  $$ \$$    $$\ \$$    $$| $$  | $$ \$$    \| $$| $$' -ForegroundColor Cyan
-Write-Host ' \$$   \$$  \$$$$$$$ \$$  \$$  \$$  \$$$$$$    \$$$$   \$$$$$$$  \$$$$$$  \$$   \$$  \$$$$$$$ \$$ \$$' -ForegroundColor Cyan
+Write-Host ' ______      ______      __    __      ______      ______      ______      ______      __  __      ______      __         __        ' -ForegroundColor Green
+Write-Host '/\   == \    /\  ___\    /\ "-./  \    /\  __ \    /\__  _\    /\  ___\    /\  ___\    /\ \_\ \    /\  ___\    /\ \       /\ \       ' -ForegroundColor Green
+Write-Host '\ \  __<    \ \  __\    \ \ \-./\ \   \ \ \/\ \   \/_/\ \/    \ \  __\    \ \___  \   \ \  __ \   \ \  __\    \ \ \____  \ \ \____  ' -ForegroundColor Green
+Write-Host ' \ \_\ \_\   \ \_____\   \ \_\ \ \_\   \ \_____\     \ \_\     \ \_____\   /\_____\   \ \_\ \_\   \ \_____\   \ \_____\  \ \_____\ ' -ForegroundColor Green
+Write-Host '  \/_/ /_/    \/_____/    \/_/  \/_/    \/_____/      \/_/      \/_____/   \/_____/    \/_/\/_/    \/_____/    \/_____/    \/_____/ ' -ForegroundColor Green
 Write-Host ''
 Write-Host '==================================================================================================================================================================' -ForegroundColor DarkGray
-Write-Host '[*] Status: ESP32 Remote Shell // Establishing encrypted Telegram tunnel...' -ForegroundColor Yellow
+Write-Host '[*] Status: Establishing Connection...' -ForegroundColor Yellow
 $chatId = $null
 while (-not $chatId) {
     try {
