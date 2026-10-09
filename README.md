@@ -2,12 +2,13 @@
 
 An ESP32-based HID tool that emulates a Bluetooth keyboard to launch a remote controlled PowerShell session via Telegram.
 
----
+<img width="1280" height="640" alt="cover" src="https://github.com/user-attachments/assets/284f4789-a06e-4ff2-8b74-60d3ebbe03b8" />
 
 ## The Concept
 The **ESP32 Remote Shell** is a hardware based command and control (C2) tool that bridges physical Human Interface Device (HID) emulation with a remote session. By emulating a Bluetooth keyboard, the ESP32 automates the Windows run sequence to execute a token-less PowerShell stager, establishing a secure and interactive remote shell controlled entirely via Telegram.
 
 ---
+<img width="1920" height="1080" alt="remotecover" src="https://github.com/user-attachments/assets/448814a8-4aa7-4535-a805-7609d2129b7d" />
 
 ## Key Features
 
@@ -27,8 +28,8 @@ The **ESP32 Remote Shell** is a hardware based command and control (C2) tool tha
 | Component | Specification | Details |
 | :--- | :--- | :--- |
 | **Microcontroller** | ESP32 Development Board | ESP32-WROOM-32 or equivalent with BLE support |
-| **Interface** | USB Cable | Required for flashing firmware via Arduino IDE |
-| **Target OS** | Windows 10 / 11 | Host machine must support Bluetooth peripherals &  use english |
+| **Interface** | Arduino IDE & a USB Cable | Required for flashing firmware via Arduino IDE |
+| **Target OS** | Windows 10 / 11 | Host machine must support Bluetooth and uses english as the primary language |
 
 ---
 
@@ -36,7 +37,7 @@ The **ESP32 Remote Shell** is a hardware based command and control (C2) tool tha
 
 1. Install the `ESP32-BLE-Keyboard` library via the Arduino IDE Library Manager.
 2. Open `ESP32-RemoteShell.ino` in the Arduino IDE.
-3. Update the `telegramToken` and `stagerUrl` parameters at the top of the sketch with your specific Telegram bot token and GitHub raw file URL.
+3. Update the `YOUR-TELEGRAM-BOT-TOKEN` and `https://YOUR-STAGER-FILE-URL` parameters at the top of the sketch with your specific Telegram bot token and GitHub raw file URL.
 4. Select board `ESP32 Dev Module` in the Arduino IDE and upload the firmware.
 5. Commit `agent.ps1` to the root of your public GitHub repository.
 6. Pair the ESP32 via Bluetooth settings on the target Windows PC as `Esp Remote Shell`. The stager will execute automatically upon successful connection.
