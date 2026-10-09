@@ -1,3 +1,8 @@
+Start-Sleep -Milliseconds 400
+$wshell = New-Object -ComObject WScript.Shell
+$wshell.SendKeys("{F11}")
+Start-Sleep -Milliseconds 200
+
 Clear-Host
 Write-Host ' ______      ______      __    __      ______      ______      ______      ______      __  __      ______      __         __        ' -ForegroundColor Green
 Write-Host '/\   == \    /\  ___\    /\ "-./  \    /\  __ \    /\__  _\    /\  ___\    /\  ___\    /\ \_\ \    /\  ___\    /\ \       /\ \       ' -ForegroundColor Green
