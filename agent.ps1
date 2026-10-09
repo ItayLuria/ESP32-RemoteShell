@@ -2,10 +2,10 @@ Clear-Host
 Write-Host "██▀███  ▓█████  ███▄ ▄███▓ ▒█████  ▄▄▄█████▓▓█████   ██████  ██░ ██ ▓█████  ██▓     ██▓    " -ForegroundColor Cyan
 Write-Host "▓██ ▒ ██▒▓█   ▀ ▓██▒▀█▀ ██▒▒██▒  ██▒▓  ██▒ ▓▒▓█   ▀ ▒██    ▒ ▓██░ ██▒▓█   ▀ ▓██▒    ▓██▒    " -ForegroundColor Cyan
 Write-Host "▓██ ░▄█ ▒▒███   ▓██   ▓██░▒██░  ██▒▒ ▓██░ ▒░▒███   ░ ▓██▄   ▒██▀▀██░▒███   ▒██░    ▒██░    " -ForegroundColor Cyan
-Write-Host "▒██▀▀█▄  ▒▓█   ▄ ▒██   ▒██ ▒██   ██░░ ▓██▓ ░ ▒▓█   ▄   ▒   ██▒░▓█ ░██ ▒▓█   ▄ ▒██░    ▒██░    " -ForegroundColor Green
-Write-Host "░██▓ ▒██▒░▒████▒▒██▒   ░██▒░ ████▓▒░  ▒██▒ ░ ░▒████▒▒██████▒▒░▓█▒░██▓░▒████▒░██████▒░██████▒" -ForegroundColor Green
-Write-Host "░ ▒▓ ░▒▓░░░ ▒░ ░░ ▒░   ░  ░░ ▒░▒░▒░   ▒ ░░   ░░ ▒░ ░▒ ▒▓▒ ▒ ░ ▒ ░░▒░▒░░ ▒░ ░░ ▒▓  ░░ ▒▓  ░" -ForegroundColor Green
-Write-Host "  ░▒ ░ ▒░ ░ ░  ░░  ░      ░ ░ ▒░     ░      ░ ░  ░░ ░▒  ░ ░ ▒ ░▒░ ░ ░ ░  ░░ ░ ▒  ░░ ░ ▒  ░" -ForegroundColor Green
+Write-Host "▒██▀▀█▄  ▒▓█   ▄ ▒██   ▒██ ▒██   ██░░ ▓██▓ ░ ▒▓█   ▄   ▒   ██▒░▓█ ░██ ▒▓█   ▄ ▒██░    ▒██░    " -ForegroundColor Cyan
+Write-Host "░██▓ ▒██▒░▒████▒▒██▒   ░██▒░ ████▓▒░  ▒██▒ ░ ░▒████▒▒██████▒▒░▓█▒░██▓░▒████▒░██████▒░██████▒" -ForegroundColor Cyan
+Write-Host "░ ▒▓ ░▒▓░░░ ▒░ ░░ ▒░   ░  ░░ ▒░▒░▒░   ▒ ░░   ░░ ▒░ ░▒ ▒▓▒ ▒ ░ ▒ ░░▒░▒░░ ▒░ ░░ ▒▓  ░░ ▒▓  ░" -ForegroundColor Cyan
+Write-Host "  ░▒ ░ ▒░ ░ ░  ░░  ░      ░ ░ ▒░     ░      ░ ░  ░░ ░▒  ░ ░ ▒ ░▒░ ░ ░ ░  ░░ ░ ▒  ░░ ░ ▒  ░" -ForegroundColor Cyan
 Write-Host "  ░░    ░    ░  ░         ░ ░ ▒      ░             ░  ░  ░   ░░    ░    ░  ░      ░  ░    " -ForegroundColor Cyan
 Write-Host "   ░         ░  ░         ░ ░                    ░     ░   ░    ░    ░  ░      ░  ░    " -ForegroundColor Cyan
 Write-Host ""
