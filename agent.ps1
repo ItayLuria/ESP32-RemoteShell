@@ -4,13 +4,15 @@ $wshell.SendKeys("{F11}")
 Start-Sleep -Milliseconds 200
 
 Clear-Host
+Write-Host '====================================================================================================================================' -ForegroundColor Green
+Write-Host ''
 Write-Host ' ______      ______      __    __      ______      ______      ______      ______      __  __      ______      __         __        ' -ForegroundColor Green
 Write-Host '/\   == \    /\  ___\    /\ "-./  \    /\  __ \    /\__  _\    /\  ___\    /\  ___\    /\ \_\ \    /\  ___\    /\ \       /\ \       ' -ForegroundColor Green
 Write-Host '\ \  __<    \ \  __\    \ \ \-./\ \   \ \ \/\ \   \/_/\ \/    \ \  __\    \ \___  \   \ \  __ \   \ \  __\    \ \ \____  \ \ \____  ' -ForegroundColor Green
 Write-Host ' \ \_\ \_\   \ \_____\   \ \_\ \ \_\   \ \_____\     \ \_\     \ \_____\   /\_____\   \ \_\ \_\   \ \_____\   \ \_____\  \ \_____\ ' -ForegroundColor Green
 Write-Host '  \/_/ /_/    \/_____/    \/_/  \/_/    \/_____/      \/_/      \/_____/   \/_____/    \/_/\/_/    \/_____/    \/_____/    \/_____/ ' -ForegroundColor Green
 Write-Host ''
-Write-Host '====================================================================================================================================' -ForegroundColor DarkGray
+Write-Host '====================================================================================================================================' -ForegroundColor Green
 Write-Host '[*] Status: Establishing Connection...' -ForegroundColor Yellow
 $chatId = $null
 while (-not $chatId) {
