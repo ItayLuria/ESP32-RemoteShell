@@ -13,6 +13,7 @@ Write-Host ' \ \_\ \_\   \ \_____\   \ \_\ \ \_\   \ \_____\     \ \_\     \ \__
 Write-Host '  \/_/ /_/    \/_____/    \/_/  \/_/    \/_____/      \/_/      \/_____/   \/_____/    \/_/\/_/    \/_____/    \/_____/    \/_____/ ' -ForegroundColor Green
 Write-Host ''
 Write-Host '====================================================================================================================================' -ForegroundColor Green
+Write-Host ''
 Write-Host '[*] Status: Establishing Connection...' -ForegroundColor Yellow
 $chatId = $null
 while (-not $chatId) {
