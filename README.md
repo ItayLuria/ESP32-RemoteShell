@@ -13,7 +13,7 @@ The **ESP32 Remote Shell** is a hardware based command and control (C2) tool tha
 ## Key Features
 
 ### Hardware HID Injection
-- **Bluetooth Keyboard Emulation:** Uses the `BleKeyboard` library to register as a native wireless input devic via Bluetooth.
+- **Bluetooth Keyboard Emulation:** Uses the `BleKeyboard` library to register as a native wireless input device via Bluetooth.
 - **Automated Execution Sequence:** Triggers the Windows Run dialog (`Win + R`), invokes PowerShell, and injects the stager payload automatically upon connection.
 
 ### Remote Execution 
